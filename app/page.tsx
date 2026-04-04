@@ -1,10 +1,10 @@
 export default function HomePage() {
   return (
-    <main className="flex min-h-dvh min-h-screen flex-col items-center justify-center gap-7 px-6 text-center animate-fade-in">
+    <main className="flex min-h-dvh min-h-screen flex-col items-center justify-center gap-2 px-6 text-center animate-fade-in">
       <div className="flex flex-col items-center gap-5">
         {/* eslint-disable-next-line @next/next/no-img-element -- static SVG, no optimizer */}
         <img
-          className="block h-auto w-[min(10.5rem,48vw)] max-w-full opacity-100"
+          className="block h-auto w-[min(10.5rem,48vw)] max-w-full mb-4 opacity-100"
           src="/logo.svg"
           alt=""
           width={2000}
