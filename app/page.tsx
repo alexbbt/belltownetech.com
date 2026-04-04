@@ -1,6 +1,9 @@
+const subtleLink =
+  "text-[clamp(0.75rem,2vw,0.8125rem)] text-white/60 transition-[opacity,color] duration-150 hover:text-white/90 hover:underline hover:decoration-white/50 hover:underline-offset-[0.2em]";
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-dvh min-h-screen flex-col items-center justify-center gap-2 px-6 text-center animate-fade-in">
+    <main className="flex min-h-dvh min-h-screen flex-col items-center justify-center gap-4 px-6 text-center animate-fade-in">
       <div className="flex flex-col items-center gap-5">
         {/* eslint-disable-next-line @next/next/no-img-element -- static SVG, no optimizer */}
         <img
@@ -18,12 +21,29 @@ export default function HomePage() {
       <p className="max-w-[22rem] text-[clamp(0.875rem,2.4vw,1rem)] leading-normal tracking-wide text-white/80">
         Software, platforms, and systems.
       </p>
-      <a
-        className="text-[clamp(0.75rem,2vw,0.8125rem)] text-white/60 transition-[opacity,color] duration-150 hover:text-white/90 hover:underline hover:decoration-white/50 hover:underline-offset-[0.2em]"
-        href="mailto:alex@belltownetech.com"
+      <p
+        className="inline-flex max-w-full flex-nowrap items-center justify-center gap-x-2 text-[clamp(0.65rem,2.6vw,0.8125rem)] text-white/65 sm:gap-x-3"
+        aria-label="Location and contact"
       >
-        alex@belltownetech.com
-      </a>
+        <span className="shrink-0">Seattle, Washington</span>
+        <span className="shrink-0 text-white/35" aria-hidden>
+          ·
+        </span>
+        <a className={`shrink-0 ${subtleLink}`} href="mailto:alex@belltownetech.com">
+          alex@belltownetech.com
+        </a>
+        <span className="shrink-0 text-white/35" aria-hidden>
+          ·
+        </span>
+        <a
+          className={`shrink-0 ${subtleLink}`}
+          href="https://github.com/alexbbt"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          GitHub
+        </a>
+      </p>
     </main>
   );
 }
