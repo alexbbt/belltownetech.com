@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  /* One dvh-sized root so children use % height — avoids mixing legacy vh (100vh) with dvh. */
   html {
-    @apply h-full;
+    @apply h-dvh min-h-dvh overflow-x-clip;
   }
 
   body {
-    @apply min-h-dvh min-h-screen bg-surface font-sans text-white antialiased;
+    @apply m-0 box-border h-full bg-surface font-sans text-white antialiased;
   }
 
   @media (prefers-reduced-motion: reduce) {
